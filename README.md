@@ -25,7 +25,7 @@ ActivityIndicator indicator = new ActivityIndicator { AutomationId = "LoadingInd
 
 ```
 
-### Interacting with an `ActivityIndicator` in Xamarin.UITest
+### Interacting with an `ActivityIndicator` in Xamarin.UITest Project
 
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `ActivityIndicator` on both iOS and Android.
 
@@ -57,15 +57,13 @@ BoxView indicator = new BoxView { AutomationId = "MyBox"};
 
 ```
 
-### Interacting with a `BoxView` in Xamarin.UITest
+### Interacting with a `BoxView` in Xamarin.UITest Project
 
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `BoxView` on both iOS and Android.
 
 ```C#
 app.Tap(x=>x.Marked("MyBox"));
 ```
-
-I'm not sure why you would need to interact with a `BoxView`, but there it is.
 
 ## `Button`
 
@@ -78,7 +76,7 @@ Setting the `AutomationId` property on the `Button` will translate to the `Id` p
 
 ### Uniquely Identifying a `Button` on Android
 
-Native Control: [Android.Widget.Button](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/Renderers/ButtonRenderer.cs)  
+Native Control: [Android.Widget.Button](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/Renderers/ButtonRenderer.cs)
 Setting the `AutomationId` property on the `Button` will translate to the `Label` property to identify in `Xamarin.UITest`. The `Text` property to identify in `Xamarin.UITest` will be whatever the `Button.Text` property is set to.
 
 ### Setting `AutomationId` for a `Button` in Xamarin.Forms Project
@@ -88,7 +86,7 @@ Button loginButton = new Button { AutomationId = "LoginButton"};
 
 ```
 
-### Interacting with a `Button` in Xamarin.UITest
+### Interacting with a `Button` in Xamarin.UITest Project
 
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `Button` on both iOS and Android.
 
@@ -115,7 +113,7 @@ DatePicker datePicker = new DatePicker { AutomationId = "MyDatePicker"};
 
 ```
 
-### Interacting with an iOS `DatePicker` in Xamarin.UITest
+### Interacting with an iOS `DatePicker` in Xamarin.UITest Project
 
 ```C#
 //Activate the DatePicker
@@ -146,7 +144,7 @@ DatePicker datePicker = new DatePicker { AutomationId = "MyDatePicker"};
 
 ```
 
-### Interacting with an Android `DatePicker` in Xamarin.UITest
+### Interacting with an Android `DatePicker` in Xamarin.UITest Project
 
 ```C#
 //Activate the DatePicker
@@ -184,7 +182,7 @@ Setting the `AutomationId` property on the `EditText` will translate to the `Lab
 Editor editor = new Editor { AutomationId = "NewsEditor"};
 ```
 
-### Interacting with an `Editor` in Xamarin.UITest
+### Interacting with an `Editor` in Xamarin.UITest Project
 
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `Editor` on both iOS and Android.
 
@@ -220,7 +218,7 @@ Setting the `AutomationId` property on the `EditText` will translate to the `Lab
 Entry usernameEntry = new Entry { AutomationId = "UsernameEntry"};
 ```
 
-### Interacting with an `Entry` in Xamarin.UITest
+### Interacting with an `Entry` in Xamarin.UITest Project
 
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `Entry` on both iOS and Android. 
 
@@ -257,7 +255,7 @@ Setting the `AutomationId` property on the `Image` will translate to the `Label`
 Image profilePic = new Image { AutomationId = "ProfilePicture"};
 ```
 
-### Interacting with an `Image` in Xamarin.UITest
+### Interacting with an `Image` in Xamarin.UITest Project
 
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `Image` on both iOS and Android.
 
@@ -285,7 +283,7 @@ Setting the `AutomationId` property on the `Xamarin.Forms.Label` will translate 
 Label usernameLabel = new Label { AutomationId = "MyLabel"};
 ```
 
-### Interacting with a `Label` in Xamarin.UITest
+### Interacting with a `Label` in Xamarin.UITest Project
 
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `Xamarin.Forms.Label` on both iOS and Android.
 
@@ -314,7 +312,7 @@ Setting the `AutomationId` property on the `Xamarin.Forms.ListView` will transla
 ListView myList = new ListView { AutomationId = "MyListView"};
 ```
 
-### Interacting with a `ListView` in Xamarin.UITest
+### Interacting with a `ListView` in Xamarin.UITest Project
 
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `Xamarin.Forms.ListView` on both iOS and Android.
 
@@ -409,7 +407,7 @@ Setting the `AutomationId` property on the `ProgressBar` will translate to the `
 ProgressBar progressBar = new ProgressBar { AutomationId = "LoadingProgress"};
 ```
 
-### Interacting with a `ProgressBar` in Xamarin.UITest
+### Interacting with a `ProgressBar` in Xamarin.UITest Project
 
 #### Getting `ProgressBar` Current Level
 
@@ -453,7 +451,7 @@ Setting the `AutomationId` property on the `SearchBar` will translate to the `La
 SearchBar searchBar = new SearchBar { AutomationId = "UserSearchBar"};
 ```
 
-### Interacting with a `SearchBar` in Xamarin.UITest
+### Interacting with a `SearchBar` in Xamarin.UITest Project
 
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `SearchBar` on both iOS and Android.
 
@@ -469,7 +467,7 @@ app.DismissKeyboard();
 
 The code above is an example of entering text into the Editor and clearing text from the Editor. Make sure you don't forget to dismiss the keyboard afterwards to ensure the keyboard isn't covering up any UI elements.
 
-#### Cancelling The `SearchBar` Search in Xamarin.UITest
+#### Cancelling The `SearchBar` Search in Xamarin.UITest Project
 
 ```C#
 if(OnAndroid)
@@ -501,7 +499,7 @@ Setting the `AutomationId` property on the `Stepper` will translate to the `Labe
 Stepper stepper = new Stepper { AutomationId = "MyStepper"};
 ```
 
-### Interacting with a `Stepper` in Xamarin.UITest
+### Interacting with a `Stepper` in Xamarin.UITest Project
 
 #### Increasing the value of a `Stepper`
 
@@ -551,7 +549,7 @@ Setting the `AutomationId` property on the `Switch` will translate to the `Label
 Switch stepper = new Switch { AutomationId = "MySwitch"};
 ```
 
-### Interacting with a `Switch` in Xamarin.UITest
+### Interacting with a `Switch` in Xamarin.UITest Project
 
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `SearchBar` on both iOS and Android.
 
@@ -578,7 +576,7 @@ Setting the `AutomationId` property on the `TableView` will translate to the `La
 TableView tableView = new TableView { AutomationId = "MyTableView"};
 ```
 
-### Interacting with a `TableView` in Xamarin.UITest
+### Interacting with a `TableView` in Xamarin.UITest Project
 
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `Xamarin.Forms.ListView` on both iOS and Android. 
 
@@ -586,17 +584,17 @@ Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked
 app.Query((x=>x.Marked("MyTableView"));
 ```
 
-### Interacting with Built-in Xamarin.Forms.Cells in Xamarin.UITest
+### Interacting with Built-in Xamarin.Forms.Cells in Xamarin.UITest Project
 
 These cells are typically constructed together with a combination of other elements. Due to this, we typically have to identify the cell in some way and access the objects through the `Child()` method in `Xamarin.UITest`.
 
-#### Interacting with an `TextCell` in Xamarin.UITest
+#### Interacting with an `TextCell` in Xamarin.UITest Project
 
 ```C#
     app.Query(x=>x.Marked("TextCell Text"));
 ```
 
-#### Interacting with an `EntryCell` in Xamarin.UITest
+#### Interacting with an `EntryCell` in Xamarin.UITest Project
 
 ```C#
 //Enter some text
@@ -621,7 +619,7 @@ In the code above on iOS, we have to interact with the cell children to enter te
 
 In the code above on Android, we have to interact with the cell children to enter text or clear text. Each `EntryCell` will have two children on Android, the first index (0) is the `TextView` containing the text displayed in the cell. The second index (1) is the physical `Entry` for the user to input.
 
-#### Interacting with an `SwitchCell` in Xamarin.UITest
+#### Interacting with an `SwitchCell` in Xamarin.UITest Project
 
 ```C#
 if(OnAndroid)
@@ -644,7 +642,7 @@ Setting the `AutomationId` property on the `TimePicker` will translate to the `I
 
 We will need to first tap on the `UITextField` to engage the `UIDatePicker`. From there we will need to invoke the native method `selectRow()` on the `UIDatePicker` and press the "ok" button.
 
-### Interacting with an iOS `TimePicker` in Xamarin.UITest
+### Interacting with an iOS `TimePicker` in Xamarin.UITest Project
 
 ```C#
 //Activate the DatePicker
@@ -674,7 +672,7 @@ We will need to first tap on the `Android.Widget.EditText` to engage the `Androi
 TimePicker myTime = new TimePicker { AutomationId = "MyTimePicker"};
 ```
 
-### Interacting with an Android `TimePicker` in Xamarin.UITest
+### Interacting with an Android `TimePicker` in Xamarin.UITest Project
 
 ```C#
 //Activate the TimePicker
@@ -710,9 +708,9 @@ Setting the `AutomationId` property does not work for the `WebView` control and 
 Native Control: [Android.Widget.WebView](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/Renderers/WebViewRenderer.cs).
 Setting the `AutomationId` property on the `TimePicker` will translate to the `Label` property to identify the `Android.Widget.WebView`.
 
-### Interacting with a `WebView` in Xamarin.UITest
+### Interacting with a `WebView` in Xamarin.UITest Project
 
-#### Verify `WebView` Is Loading in Xamarin.UITest
+#### Verify `WebView` Is Loading in Xamarin.UITest Project
 
 ```C#
 if(OnAndroid)
@@ -721,7 +719,7 @@ else if(OniOS)
     int isLoading = app.Query(x => x.Class("Xamarin_Forms_Platform_iOS_WebViewRenderer").Invoke("isLoading")); //0 = false, 1 = true
 ```
 
-#### Get Current Request URL in Xamarin.UITest
+#### Get Current Request URL in Xamarin.UITest Project
 
 ```C#
 if(OnAndroid)
@@ -730,7 +728,7 @@ else if(OniOS)
     string url = app.Query(x => x.Class("Xamarin_Forms_Platform_iOS_WebViewRenderer").Invoke("request"));
 ```
 
-#### Reload Current `WebView` in Xamarin.UITest
+#### Reload Current `WebView` in Xamarin.UITest Project
 
 ```C#
 if(OnAndroid)
@@ -739,7 +737,7 @@ else if(OniOS)
     app.Query(x => x.Class("Xamarin_Forms_Platform_iOS_WebViewRenderer").Invoke("reload"));
 ```
 
-#### Navigate Back in Current `WebView` in Xamarin.UITest
+#### Navigate Back in Current `WebView` in Xamarin.UITest Project
 
 ```C#
 if(OnAndroid)
@@ -748,7 +746,7 @@ else if(OniOS)
     app.Query(x => x.Class("Xamarin_Forms_Platform_iOS_WebViewRenderer").Invoke("goBack"));
 ```
 
-#### Navigate Forward in Current `WebView` in Xamarin.UITest
+#### Navigate Forward in Current `WebView` in Xamarin.UITest Project
 
 ```C#
 if(OnAndroid)
@@ -757,7 +755,7 @@ else if(OniOS)
     app.Query(x => x.Class("Xamarin_Forms_Platform_iOS_WebViewRenderer").Invoke("goForward"));
 ```
 
-#### Evaluate Javascript in Current `WebView` in Xamarin.UITest
+#### Evaluate Javascript in Current `WebView` in Xamarin.UITest Project
 
 ```C#
 string javascript = "document.getElementById(\"lst-ib\").value=\"Hello\"; //Javascript to change google.com search bar text to "Hello"
@@ -781,7 +779,7 @@ Setting the `AutomationId` property on the `ToolbarItem` will translate to the `
 //Setting the AutomationId property of ToolBarItem
 ToolbarItem firstButton = new ToolbarItem { AutomationId = "ToolbarButtonOne"};
 
-### Interacting with an iOS `ToolbarItem` in Xamarin.UITest
+### Interacting with an iOS `ToolbarItem` in Xamarin.UITest Project
 
 //Tapping the NavBar button
 app.Tap(x=>x.Id("ToolbarButtonOne"));
