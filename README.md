@@ -71,7 +71,7 @@ app.Tap(x => x.Marked("MyBox"));
 
 ### Uniquely Identifying a `Button` on iOS
 
-Native Control: [UIButton](https://github.com/xamarin/Xamarin.Forms/blob/74cb5c4a97dcb123eb471f6b1dffa1267d0305aa/Xamarin.Forms.Platform.iOS/Renderers/ButtonRenderer.cs)  
+Native Control: [UIButton](https://github.com/xamarin/Xamarin.Forms/blob/74cb5c4a97dcb123eb471f6b1dffa1267d0305aa/Xamarin.Forms.Platform.iOS/Renderers/ButtonRenderer.cs)
 Setting the `AutomationId` property on the `Button` will translate to the `Id` property to identify in `Xamarin.UITest`. The `Label` property to identify in `Xamarin.UITest` will be whatever the `Button.Text` property is set to.
 
 ### Uniquely Identifying a `Button` on Android
@@ -123,7 +123,7 @@ app.Tap(x => x.Id("{MyDatePicker}"));
 //Wait for DatePicker animation to completed
 app.WaitForElement(x => x.Class("UIPickerView"));
 
-//Invoke the native method selectRow() 
+//Invoke the native method selectRow()
 app.Query (x => x.Class ("UIPickerView").Invoke ("selectRow", date.Month - 1 , "inComponent", 0, "animated", true));
 app.Query (x => x.Class ("UIPickerView").Invoke ("selectRow", date.Day - 1, "inComponent", 1, "animated", true));
 app.Query (x => x.Class ("UIPickerView").Invoke ("selectRow", date.Year - 1, "inComponent", 2, "animated", true));
@@ -205,7 +205,7 @@ The code above is an example of entering text into the Editor and clearing text 
 
 ### Uniquely Identifying a `Entry` on iOS
 
-Native Control: [UITextField](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/Renderers/EntryRenderer.cs) 
+Native Control: [UITextField](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/Renderers/EntryRenderer.cs)
 Setting the `AutomationId` property on the `Entry` will translate to the `Id` property to identify in `Xamarin.UITest`.
 
 ### Uniquely Identifying a `Entry` on Android
@@ -221,7 +221,7 @@ Entry usernameEntry = new Entry { AutomationId = "UsernameEntry"};
 
 ### Interacting with an `Entry` in Xamarin.UITest Project
 
-Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `Entry` on both iOS and Android. 
+Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `Entry` on both iOS and Android.
 
 ```C#
 //EnterText into Entry
@@ -271,7 +271,7 @@ app.Query((x => x.Marked("ProfilePicture"));
 
 ### Uniquely Identifying a `Label` on iOS
 
-Native Control: [UILabel](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/Renderers/LabelRenderer.cs) 
+Native Control: [UILabel](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/Renderers/LabelRenderer.cs)
 Setting the `AutomationId` property on the `Xamarin.Forms.Label` will translate to the `Id` property to identify in `Xamarin.UITest`.
 
 ### Uniquely Identifying a `Label` on Android
@@ -301,7 +301,7 @@ This is a control that needs to be handled differently for iOS and Android. We w
 
 ### Uniquely Identifying a `ListView` on iOS
 
-Native Control: [UITableView](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/Renderers/ListViewRenderer.cs) 
+Native Control: [UITableView](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/Renderers/ListViewRenderer.cs)
 Setting the `AutomationId` property on the `Xamarin.Forms.Label` will translate to the `Id` property to identify in `Xamarin.UITest`.
 
 ### Uniquely Identifying a `ListView` on Android
@@ -324,6 +324,7 @@ app.Query((x => x.Marked("MyListView"));
 ```
 
 #### Interacting with Pull-to-refresh on `Xamarin.Forms.ListView`
+
 We must handle the Pull-to-refresh differently between iOS and Android. This is because the refreshing indicator is handled differently on each platform. On iOS, there is a `UIRefreshControl` that is displayed when the pull-to-refresh command is executing. On Android, we have to invoke the native `android.support.v4.widget.SwipeRefreshLayout.isRefreshing()` method. This will tell us if the refresh loading indicator is displayed or not. 
 
 ```C#
@@ -441,7 +442,7 @@ In the code above, we have to invoke native methods to set the progress level. O
 
 ### Uniquely Identifying a `SearchBar` on iOS
 
-Native Control: [UISearchBar](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/Renderers/SearchBarRenderer.cs) 
+Native Control: [UISearchBar](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/Renderers/SearchBarRenderer.cs)
 Setting the `AutomationId` property on the `SearchBar` will translate to the `Id` property to identify the `UISearchBar` in `Xamarin.UITest`. The "Cancel" button will have a `Label` property of "Cancel".
 
 ### Uniquely Identifying a `SearchBar` on Android
@@ -477,7 +478,7 @@ The code above is an example of entering text into the Editor and clearing text 
 if(OnAndroid)
     app.Tap(x => x.Marked("Cancel"));
 else if(OniOS)
-    app.Tap(x => x.Id("search_close_btn")); 
+    app.Tap(x => x.Id("search_close_btn"));
 ```
 
 In the code above, we can interact with the "Cancel" button found on the search controls. It is important to note that on Android, you might need to call `DismissKeyboard()` depending on how you are using the search and what version of Android you are on.
@@ -570,7 +571,7 @@ This is a control that needs to be handled differently for iOS and Android. We w
 
 ### Uniquely Identifying a `TableView` on iOS
 
-Native Control: [UITableView](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/Renderers/TableViewRenderer.cs) 
+Native Control: [UITableView](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.iOS/Renderers/TableViewRenderer.cs)
 Setting the `AutomationId` property on the `TableView` will translate to the `Id` property to identify the `UITableView` in `Xamarin.UITest`.
 
 ### Uniquely Identifying a `TableView` on Android
@@ -606,11 +607,11 @@ app.Query(x => x.Marked("TextCell Text"));
 //Enter some text
 if(OniOS)
 {
-    app.EnterText(x => x.Class("Xamarin_Forms_Platform_iOS_EntryCellRenderer_EntryCellTableViewCell").Child(0).Child(0), "Text to enter"); 
+    app.EnterText(x => x.Class("Xamarin_Forms_Platform_iOS_EntryCellRenderer_EntryCellTableViewCell").Child(0).Child(0), "Text to enter");
     app.DismissKeyboard();
 } else if (OnAndroid)
 {
-    app.EnterText(x => x.Class("EntryCellView").Child(1), "Text to enter"); 
+    app.EnterText(x => x.Class("EntryCellView").Child(1), "Text to enter");
     app.DismissKeyboard();
 }
 
@@ -618,7 +619,7 @@ if(OniOS)
 if(OniOS)
     app.ClearText(x => x.Class("Xamarin_Forms_Platform_iOS_EntryCellRenderer_EntryCellTableViewCell").Child(0).Child(0));
 else if (OnAndroid)
-    app.ClearText(x => x.Class("EntryCellView").Child(1)); 
+    app.ClearText(x => x.Class("EntryCellView").Child(1));
 ```
 
 In the code above on iOS, we have to interact with the cell children to enter text or clear text. Each `EntryCell` will have three children on iOS, the first index (0) is the physical view of the cell while the next two indexes (1 and 2) are the `UITableViewCellSeparatorView`. After we access the Cell view, there are two more children of this view: the `UILabel` and `UITextField` of the `EntryCell`. We will want to access the first child which is the `UITextField`.
@@ -631,7 +632,7 @@ In the code above on Android, we have to interact with the cell children to ente
 if(OnAndroid)
      app.Query(x => x.Class("SwitchCellView").Class("Switch").Invoke("setChecked", {true or false});
 else if(OniOS)
-    app.Query(x => x.Class("Xamarin_Forms_Platform_iOS_CellTableViewCell").Class("UISwitch").Invoke("setOn:animated", {true or false}));   
+    app.Query(x => x.Class("Xamarin_Forms_Platform_iOS_CellTableViewCell").Class("UISwitch").Invoke("setOn:animated", {true or false}));
 ```
 
 In the code above, we have to interact with the cell children to toggle the `Switch`. We can directly invoke the native class of the `Switch` element to toggle it.
@@ -657,7 +658,7 @@ app.Tap(x => x.Id("{AutomationId of Xamarin.Forms.DatePicker}"));
 //Wait for DatePicker animation to completed
 app.WaitForElement(x => x.Class("UIPickerView"));
 
-//Invoke the native method selectRow() 
+//Invoke the native method selectRow()
 app.Query (x => x.Class ("UIPickerView").Invoke ("selectRow", time.Hour , "inComponent", 0, "animated", true)); //if time.Hour == 0, than hour is '1'. if time.Hour == 11, than hour is '12'
 app.Query (x => x.Class ("UIPickerView").Invoke ("selectRow", time.Minutes, "inComponent", 1, "animated", true)); //if time.Minute == 0, than minutes is '1'. if time.Minute == 59, than minutes is '59'
 app.Query (x => x.Class ("UIPickerView").Invoke ("selectRow", 0, "inComponent", 2, "animated", true)); //0 == AM and 1 == PM
@@ -667,7 +668,7 @@ The code above shows how we can invoke the `selectRow()` method on the DatePicke
 
 ### Uniquely Identifying a `TimePicker` on Android
 
-Native Control: [Android.Widget.TimePicker](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/Renderers/TimePickerRenderer.cs) with `Android.Widget.EditText`  
+Native Control: [Android.Widget.TimePicker](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/Renderers/TimePickerRenderer.cs) with `Android.Widget.EditText`
 Setting the `AutomationId` property on the `TimePicker` will translate to the `Label` property to identify the `Android.Widget.EditText`.
 
 We will need to first tap on the `Android.Widget.EditText` to engage the `Android.Widget.TimePicker`. From there we will need to invoke the native method `updateDate()` on the `Android.Widget.TimePicker` and press the "ok" button.
@@ -706,7 +707,7 @@ This is a control that needs to be handled differently for iOS and Android. We w
 
 ### Uniquely Identifying a `WebView` on iOS
 
-Native Control: [UIWebView](https://github.com/xamarin/Xamarin.Forms/blob/74cb5c4a97dcb123eb471f6b1dffa1267d0305aa/Xamarin.Forms.Platform.iOS/Renderers/WebViewRenderer.cs)  
+Native Control: [UIWebView](https://github.com/xamarin/Xamarin.Forms/blob/74cb5c4a97dcb123eb471f6b1dffa1267d0305aa/Xamarin.Forms.Platform.iOS/Renderers/WebViewRenderer.cs)
 Setting the `AutomationId` property does not work for the `WebView` control and we must identify the `WebView` through its class: `Xamarin_Forms_Platform_iOS_WebViewRenderer`.
 
 ### Uniquely Identifying a `WebView` on Android
