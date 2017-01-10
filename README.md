@@ -30,8 +30,8 @@ ActivityIndicator indicator = new ActivityIndicator { AutomationId = "LoadingInd
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `ActivityIndicator` on both iOS and Android.
 
 ```C#
-app.WaitForElement(x=>x.Marked("LoadingIndicator"));
-app.WaitForNoElement(x=>x.Marked("LoadingIndicator))
+app.WaitForElement(x => x.Marked("LoadingIndicator"));
+app.WaitForNoElement(x => x.Marked("LoadingIndicator))
 ```
 
 The code above would be an example of waiting for the `ActivityIndicator` to appear on the screen or disappear from the screen. It is common to use the `ActivityIndicator` appearing to wait for information to begin loading on the screen and then the `ActivityIndicator` disappearrance to assume all of the data has been loaded on the screen. The code above would acheive this desired effect.
@@ -62,7 +62,7 @@ BoxView indicator = new BoxView { AutomationId = "MyBox"};
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `BoxView` on both iOS and Android.
 
 ```C#
-app.Tap(x=>x.Marked("MyBox"));
+app.Tap(x => x.Marked("MyBox"));
 ```
 
 ## `Button`
@@ -91,7 +91,7 @@ Button loginButton = new Button { AutomationId = "LoginButton"};
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `Button` on both iOS and Android.
 
 ```C#
-app.Tap(x=>x.Marked("LoginButton"));
+app.Tap(x => x.Marked("LoginButton"));
 ```
 
 ## `DatePicker`
@@ -189,11 +189,11 @@ Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked
 
 ```C#
 //EnterText into Editor
-app.EnterText(x=>x.Marked("NewsEditor"), "This is some text");
+app.EnterText(x => x.Marked("NewsEditor"), "This is some text");
 app.DismissKeyboard();
 
 //ClearText from Editor
-app.ClearText(x=>x.Marked("NewsEditor"));
+app.ClearText(x => x.Marked("NewsEditor"));
 app.DismissKeyboard();
 ```
 
@@ -225,11 +225,11 @@ Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked
 
 ```C#
 //EnterText into Entry
-app.EnterText(x=>x.Marked("UsernameEntry"), "This is some text");
+app.EnterText(x => x.Marked("UsernameEntry"), "This is some text");
 app.DismissKeyboard();
 
 //ClearText from Entry
-app.ClearText(x=>x.Marked("UsernameEntry"));
+app.ClearText(x => x.Marked("UsernameEntry"));
 app.DismissKeyboard();
 ```
 
@@ -262,7 +262,7 @@ Image profilePic = new Image { AutomationId = "ProfilePicture"};
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `Image` on both iOS and Android.
 
 ```C#
-app.Query((x=>x.Marked("ProfilePicture"));
+app.Query((x => x.Marked("ProfilePicture"));
 ```
 
 ## `Label`
@@ -290,7 +290,7 @@ Label usernameLabel = new Label { AutomationId = "MyLabel"};
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `Xamarin.Forms.Label` on both iOS and Android.
 
 ```C#
-app.Query((x=>x.Marked("MyLabel"));
+app.Query((x => x.Marked("MyLabel"));
 ```
 
 ## `ListView`
@@ -320,7 +320,7 @@ ListView myList = new ListView { AutomationId = "MyListView"};
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `Xamarin.Forms.ListView` on both iOS and Android.
 
 ```C#
-app.Query((x=>x.Marked("MyListView"));
+app.Query((x => x.Marked("MyListView"));
 ```
 
 #### Interacting with Pull-to-refresh on `Xamarin.Forms.ListView`
@@ -461,11 +461,11 @@ Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked
 
 ```C#
 //EnterText into SearchBar
-app.EnterText(x=>x.Marked("UserSearchBar"), "This is some text");
+app.EnterText(x => x.Marked("UserSearchBar"), "This is some text");
 app.DismissKeyboard();
 
 //ClearText from SearchBar
-app.ClearText(x=>x.Marked("UserSearchBar"));
+app.ClearText(x => x.Marked("UserSearchBar"));
 app.DismissKeyboard();
 ```
 
@@ -475,7 +475,7 @@ The code above is an example of entering text into the Editor and clearing text 
 
 ```C#
 if(OnAndroid)
-    app.Tap(x=>x.Marked("Cancel"));
+    app.Tap(x => x.Marked("Cancel"));
 else if(OniOS)
     app.Tap(x => x.Id("search_close_btn")); 
 ```
@@ -512,7 +512,7 @@ Stepper stepper = new Stepper { AutomationId = "MyStepper"};
 if(OnAndroid)
     app.Tap(x => x.Class("android.widget.Button").Text("+"))
 else if(OniOS)
-    app.Tap(x=>x.Marked("Increment"));
+    app.Tap(x => x.Marked("Increment"));
 ```
 
 #### Decreasing the value of a `Stepper`
@@ -521,7 +521,7 @@ else if(OniOS)
 if(OnAndroid)
     app.Tap(x => x.Class("android.widget.Button").Text("-"))
 else if(OniOS)
-    app.Tap(x=>x.Marked("Decrement"));
+    app.Tap(x => x.Marked("Decrement"));
 ```
 
 #### Getting value of a `Stepper`
@@ -559,7 +559,7 @@ Switch stepper = new Switch { AutomationId = "MySwitch"};
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `SearchBar` on both iOS and Android.
 
 ```C#
-app.tap(x=>x.Marked("MySwitch"));
+app.tap(x => x.Marked("MySwitch"));
 ```
 
 ## `TableView`
@@ -587,7 +587,7 @@ TableView tableView = new TableView { AutomationId = "MyTableView"};
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `Xamarin.Forms.ListView` on both iOS and Android. 
 
 ```C#
-app.Query((x=>x.Marked("MyTableView"));
+app.Query((x => x.Marked("MyTableView"));
 ```
 
 ### Interacting with Built-in Xamarin.Forms.Cells in Xamarin.UITest Project
@@ -597,7 +597,7 @@ These cells are typically constructed together with a combination of other eleme
 #### Interacting with an `TextCell` in Xamarin.UITest Project
 
 ```C#
-    app.Query(x=>x.Marked("TextCell Text"));
+    app.Query(x => x.Marked("TextCell Text"));
 ```
 
 #### Interacting with an `EntryCell` in Xamarin.UITest Project
@@ -803,5 +803,5 @@ Setting the `AutomationId` property on the `ToolbarItem` does not work. Whatever
 ToolbarItem firstButton = new ToolbarItem { AutomationId = "ToolbarButtonOne", Text = "ToolBarButtonText" };
 
 //Tapping the NavBar button
-app.Tap(x=>x.Marked("ToolBarButtonText"));
+app.Tap(x => x.Marked("ToolBarButtonText"));
 ```
