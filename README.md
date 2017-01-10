@@ -97,6 +97,7 @@ app.Tap(x=>x.Marked("LoginButton"));
 ## `DatePicker`
 
 ![DatePicker](images/DatePicker.png)
+
 This is a control that needs to be handled differently for iOS and Android. We will also need to know how to invoke the native methods to set the date.
 
 ### Uniquely Identifying a `DatePicker` on iOS
@@ -237,6 +238,7 @@ The code above is an example of entering text into the Entry and clearing text f
 ## `Image`
 
 ![Image](images/Image.png)
+
 This is a control that needs to be handled differently for iOS and Android. We will also need to know how to invoke the native methods to set the date.
 
 ### Uniquely Identifying a `Image` on iOS
@@ -294,6 +296,7 @@ app.Query((x=>x.Marked("MyLabel"));
 ## `ListView`
 
 ![ListView](images/ListView.png)
+
 This is a control that needs to be handled differently for iOS and Android. We will also need to know how to invoke the native methods to set the date.
 
 ### Uniquely Identifying a `ListView` on iOS
@@ -389,6 +392,7 @@ TBD
 ## `ProgressBar`
 
 ![ProgressBar](images/ProgressBar.png)
+
 This is a control that needs to be handled differently for iOS and Android. We will also need to know how to invoke the native methods to set the date.
 
 ### Uniquely Identifying a `ProgressBar` on iOS
@@ -481,6 +485,7 @@ In the code above, we can interact with the "Cancel" button found on the search 
 ## `Stepper`
 
 ![Stepper](images/Stepper.png)
+
 This is a control that needs to be handled differently for iOS and Android. We will also need to know how to invoke the native methods to set the date.
 
 ### Uniquely Identifying a `Stepper` on iOS
@@ -560,6 +565,7 @@ app.tap(x=>x.Marked("MySwitch"));
 ## `TableView`
 
 ![TableView](images/TableViewNewest.png)
+
 This is a control that needs to be handled differently for iOS and Android. We will also need to know how to invoke the native methods to set the date.
 
 ### Uniquely Identifying a `TableView` on iOS
