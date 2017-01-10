@@ -118,10 +118,10 @@ DatePicker datePicker = new DatePicker { AutomationId = "MyDatePicker"};
 
 ```C#
 //Activate the DatePicker
-app.Tap(x=>x.Id("{MyDatePicker}"));
+app.Tap(x => x.Id("{MyDatePicker}"));
 
 //Wait for DatePicker animation to completed
-app.WaitForElement(x=>x.Class("UIPickerView"));
+app.WaitForElement(x => x.Class("UIPickerView"));
 
 //Invoke the native method selectRow() 
 app.Query (x => x.Class ("UIPickerView").Invoke ("selectRow", date.Month - 1 , "inComponent", 0, "animated", true));
@@ -149,16 +149,16 @@ DatePicker datePicker = new DatePicker { AutomationId = "MyDatePicker"};
 
 ```C#
 //Activate the DatePicker
-app.Tap(x=>x.Id("{MyDatePicker}"));
+app.Tap(x => x.Id("{MyDatePicker}"));
 
 //Wait for DatePicker animation to completed
-app.WaitForElement(x=>x.Class("DatePicker"));
+app.WaitForElement(x => x.Class("DatePicker"));
 
 //Invoke updateDate() method on displayed DatePicker
-app.Query(x=>x.Class("DatePicker").Invoke("updateDate",date.Year,date.Month,date.Day));
+app.Query(x => x.Class("DatePicker").Invoke("updateDate",date.Year,date.Month,date.Day));
 
 //Tap the ok button to close the DatePicker dialogue
-app.Tap(x=>x.Id("button1"));//Ok Button in DatePicker Dialogue
+app.Tap(x => x.Id("button1"));//Ok Button in DatePicker Dialogue
 ```
 
 The code above shows how we can invoke the `updateDate()` method on the DatePicker. The "ok" button will always have an `Id` property of "button1". The "cancel" button will always have an `Id` property of "button2"
@@ -652,10 +652,10 @@ We will need to first tap on the `UITextField` to engage the `UIDatePicker`. Fro
 
 ```C#
 //Activate the DatePicker
-app.Tap(x=>x.Id("{AutomationId of Xamarin.Forms.DatePicker}"));
+app.Tap(x => x.Id("{AutomationId of Xamarin.Forms.DatePicker}"));
 
 //Wait for DatePicker animation to completed
-app.WaitForElement(x=>x.Class("UIPickerView"));
+app.WaitForElement(x => x.Class("UIPickerView"));
 
 //Invoke the native method selectRow() 
 app.Query (x => x.Class ("UIPickerView").Invoke ("selectRow", time.Hour , "inComponent", 0, "animated", true)); //if time.Hour == 0, than hour is '1'. if time.Hour == 11, than hour is '12'
@@ -682,17 +682,17 @@ TimePicker myTime = new TimePicker { AutomationId = "MyTimePicker"};
 
 ```C#
 //Activate the TimePicker
-app.Tap(x=>x.Id("MyTimePicker"));
+app.Tap(x => x.Id("MyTimePicker"));
 
 //Wait for TimePicker animation to completed
-app.WaitForElement(x=>x.Id("timePicker"));
+app.WaitForElement(x => x.Id("timePicker"));
 
 //Invoke methods to select time
-app.Query(x=>x.Id("timePicker").Invoke("setHour",3));
-app.Query(x=>x.Id("timePicker").Invoke("setMinute",30));
+app.Query(x => x.Id("timePicker").Invoke("setHour",3));
+app.Query(x => x.Id("timePicker").Invoke("setMinute",30));
 
 //Tap the ok button to close the TimePicker dialogue
-app.Tap(x=>x.Id("button1"));//Ok Button in TimePicker Dialogue
+app.Tap(x => x.Id("button1"));//Ok Button in TimePicker Dialogue
 ```
 
 The code above shows how we can invoke the `Android.Widget.TimePicker` methods to set the time. The "ok" button will always have an `Id` property of "button1". The "cancel" button will always have an `Id` property of "button2".
@@ -788,7 +788,7 @@ ToolbarItem firstButton = new ToolbarItem { AutomationId = "ToolbarButtonOne"};
 ### Interacting with an iOS `ToolbarItem` in Xamarin.UITest Project
 
 //Tapping the NavBar button
-app.Tap(x=>x.Id("ToolbarButtonOne"));
+app.Tap(x => x.Id("ToolbarButtonOne"));
 ```
 
 ### Uniquely Identifying a `ToolbarItem` on Android
