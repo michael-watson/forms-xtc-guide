@@ -587,7 +587,7 @@ TableView tableView = new TableView { AutomationId = "MyTableView"};
 Since `Marked` looks at both the `Id` and `Label` properties, we can use `Marked` to uniquely identify the `Xamarin.Forms.ListView` on both iOS and Android. 
 
 ```C#
-app.Query(x => x.Marked("MyTableView");
+app.Query(x => x.Marked("MyTableView"));
 ```
 
 ### Interacting with Built-in Xamarin.Forms.Cells in Xamarin.UITest Project
