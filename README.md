@@ -333,7 +333,7 @@ public bool RefreshIndicatorIsDisplayed
     get
     {
         if (OnAndroid)
-            return (bool)app.Query(x => x.Class("SwipeRefreshLayout").Invoke("isRefreshing")).FirstOrDefault();
+            return (bool)app.Query(x => x.Class("ListViewRenderer_SwipeRefreshLayoutWithFixedNestedScrolling").Invoke("isRefreshing")).FirstOrDefault();
 
         if (OniOS)
             return (bool)app.Query(x => x.Class("UIRefreshControl")).Any();
